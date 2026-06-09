@@ -307,7 +307,6 @@ img { max-width: 100%; display: block; }
   place-items: center;
   text-align: center;
   color: var(--ink-soft);
-  padding: 1rem;
 }
 .img-placeholder svg { width: 2.4rem; height: 2.4rem; opacity: .7; margin-bottom: .4rem; }
 .img-placeholder span { font-family: var(--font-display); font-size: .9rem; }
@@ -561,7 +560,7 @@ body.no-scroll { overflow: hidden; }
 .lightbox__stage {
   background: var(--brand-soft);
   border-radius: var(--radius);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   display: grid;
   place-items: center;
   overflow: hidden;
