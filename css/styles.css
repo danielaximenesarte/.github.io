@@ -1,0 +1,489 @@
+/* ============================================================
+   danielaximenes.arte — cozy art-exposure site
+   Theme lives here. Change the colors/fonts in :root below.
+   ============================================================ */
+
+:root {
+  /* --- Main color (as requested) --- */
+  --brand: #A6D0FD;          /* soft periwinkle blue */
+  --brand-deep: #6FA8E8;     /* darker blue for accents/links */
+  --brand-soft: #E4F0FF;     /* very pale blue washes */
+
+  /* --- Warm & cozy companions --- */
+  --cream: #FFF8F0;          /* page background */
+  --cream-2: #FFF1E2;        /* alternating section background */
+  --peach: #FFD9B3;          /* warm accent */
+  --peach-deep: #F7B27A;     /* warm accent, stronger */
+  --ink: #4A3F35;            /* warm brown text */
+  --ink-soft: #7A6E62;       /* muted text */
+
+  /* --- Shape & feel --- */
+  --radius: 22px;
+  --radius-lg: 34px;
+  --shadow: 0 14px 30px rgba(74, 63, 53, 0.10);
+  --shadow-soft: 0 6px 18px rgba(74, 63, 53, 0.08);
+  --shadow-lift: 0 22px 44px rgba(111, 168, 232, 0.22);
+
+  --font-display: "Fredoka", "Quicksand", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
+
+  --maxw: 1140px;
+}
+
+/* gallery page only: plain white background */
+body.gallery-page { background: #fff; background-image: none; }
+
+/* ---------- Reset-ish ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  /* gentle organic background tint */
+  background-image:
+    radial-gradient(60rem 60rem at 110% -10%, var(--brand-soft) 0%, transparent 45%),
+    radial-gradient(50rem 50rem at -15% 20%, #FFEFDD 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 .5em;
+}
+
+p { margin: 0 0 1rem; }
+
+a { color: var(--brand-deep); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: .8rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--brand-deep);
+  background: var(--brand-soft);
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  padding: .85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--brand);
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover { background: var(--brand-deep); color: #fff; box-shadow: var(--shadow-lift); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--peach-deep);
+}
+.btn-ghost:hover { background: var(--peach); }
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 248, 240, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(166, 208, 253, 0.4);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .9rem 0;
+}
+.brand-mark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+.brand-mark:hover { text-decoration: none; }
+.brand-dot {
+  width: 1.6rem; height: 1.6rem;
+  border-radius: 50%;
+  background: var(--brand);
+  display: inline-block;
+  box-shadow: inset -4px -4px 0 rgba(111,168,232,.35);
+}
+/* circular badge logo in the header */
+.brand-logo {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: inline-block;
+}
+/* footer sits on a dark background, so flip the black logo to white */
+.site-footer .brand-logo { filter: brightness(0) invert(1); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.nav-links a {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 1rem;
+}
+.nav-links a:hover { color: var(--brand-deep); text-decoration: none; }
+
+.nav-social { display: flex; gap: .65rem; align-items: center; }
+.icon-link {
+  width: 2.2rem; height: 2.2rem;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--brand-soft);
+  color: var(--brand-deep);
+  transition: transform .18s ease, background .18s ease;
+}
+.icon-link:hover { transform: translateY(-2px) rotate(-6deg); background: var(--brand); color: #fff; text-decoration: none; }
+.icon-link svg { width: 1.1rem; height: 1.1rem; }
+
+.nav-toggle {
+  display: none;
+  background: var(--brand-soft);
+  border: none;
+  border-radius: 14px;
+  width: 2.6rem; height: 2.6rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+.nav-toggle svg { width: 1.4rem; height: 1.4rem; margin: 0 auto; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero { padding: 3.5rem 0 4rem; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+}
+.hero h1 .squiggle { color: var(--peach-deep); }
+.hero-lead {
+  font-size: 1.18rem;
+  color: var(--ink-soft);
+  max-width: 34ch;
+}
+.hero-cta { display: flex; gap: .9rem; flex-wrap: wrap; margin-top: 1.4rem; }
+
+/* Video placeholder card */
+.video-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--peach) 100%);
+  box-shadow: var(--shadow-lift);
+  transform: rotate(-1.2deg);
+}
+.video-frame {
+  aspect-ratio: 3 / 2;
+  border-radius: calc(var(--radius-lg) - 12px);
+  background:
+    repeating-linear-gradient(45deg, rgba(255,255,255,.35) 0 14px, transparent 14px 28px),
+    var(--brand-soft);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;            /* anchor the video for the shift below */
+}
+/* The clip is portrait, so it's taller than this wide box and the top/bottom get
+   cropped. We force its true shape (9:16) and slide it with translateY instead of
+   object-position (which misbehaves on rotated videos).
+   --- TO ADJUST: change the translateY value below ---
+   0% shows the very top; more negative pushes the content UP (reveals lower part). */
+.video-frame video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  height: auto;
+  object-fit: cover;
+  transform: translateY(-20%);
+}
+.play-badge {
+  width: 5rem; height: 5rem;
+  border-radius: 50%;
+  background: #fff;
+  display: grid; place-items: center;
+  box-shadow: var(--shadow);
+  margin: 0 auto .75rem;
+}
+.play-badge svg { width: 2rem; height: 2rem; color: var(--brand-deep); margin-left: 4px; }
+.video-caption { font-family: var(--font-display); color: var(--ink-soft); font-size: .95rem; }
+.placeholder-hint { font-size: .8rem; color: var(--ink-soft); opacity: .8; }
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+.section { padding: 4rem 0; }
+.section--warm { background: var(--cream-2); }
+.section-head { text-align: center; max-width: 46ch; margin: 0 auto 2.5rem; }
+.section-head h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); }
+.section-head p { color: var(--ink-soft); }
+
+/* wavy divider */
+.wave-divider { display: block; width: 100%; height: 40px; color: var(--cream-2); }
+
+/* ---------- Gallery grid + cards ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+.art-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.art-card:nth-child(even) { transform: rotate(.6deg); }
+.art-card:nth-child(odd)  { transform: rotate(-.6deg); }
+.art-card:hover { transform: translateY(-6px) rotate(0); box-shadow: var(--shadow-lift); }
+
+/* the image placeholder (swap the inner div for an <img>) */
+.img-placeholder {
+  aspect-ratio: 4 / 5;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.6), transparent 60%),
+    linear-gradient(135deg, var(--brand-soft), var(--peach));
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--ink-soft);
+  padding: 1rem;
+}
+.img-placeholder svg { width: 2.4rem; height: 2.4rem; opacity: .7; margin-bottom: .4rem; }
+.img-placeholder span { font-family: var(--font-display); font-size: .9rem; }
+.img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+.art-body { padding: 1.1rem 1.25rem 1.4rem; }
+.art-body h3 { font-size: 1.2rem; margin-bottom: .3rem; }
+.art-meta { font-size: .82rem; color: var(--brand-deep); font-family: var(--font-display); margin-bottom: .5rem; }
+.art-desc { color: var(--ink-soft); font-size: .96rem; margin: 0; }
+
+/* ---------- About teaser ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+.portrait-placeholder {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--peach), var(--brand));
+  display: grid; place-items: center;
+  color: #fff;
+  box-shadow: var(--shadow);
+  transform: rotate(-2deg);
+}
+.portrait-placeholder svg { width: 3rem; height: 3rem; opacity: .85; }
+
+/* ---------- Alternating story rows (About page) ---------- */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+.story + .story { margin-top: 4.5rem; }
+.story-media { justify-self: center; width: 100%; max-width: 360px; }
+
+/* warm gradient photo frame (echoes the hero video card) */
+.photo-frame {
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  background: linear-gradient(135deg, var(--brand), var(--peach));
+  box-shadow: var(--shadow-lift);
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius-lg) - 10px);
+}
+/* the behind-the-scenes photo is already shot at an angle, so only this one tilts */
+.photo-frame--tilt { transform: rotate(-1.5deg); }
+
+@media (max-width: 760px) {
+  .story { grid-template-columns: 1fr; gap: 1.8rem; }
+  .story + .story { margin-top: 3rem; }
+  .story-media { max-width: 300px; order: -1; }   /* image first on mobile */
+}
+.about-photo figcaption {
+  font-family: var(--font-display);
+  color: var(--ink-soft);
+  font-size: .85rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ---------- Say hello strip ---------- */
+.hello {
+  background: var(--brand);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  background-image: radial-gradient(circle at 0% 0%, rgba(255,255,255,.35), transparent 40%);
+}
+.hello h2 { color: var(--ink); }
+.hello-form {
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+.hello-form input {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: .8rem 1.1rem;
+  border-radius: 999px;
+  border: 2px solid #fff;
+  background: #fff;
+  min-width: 260px;
+  color: var(--ink);
+}
+.hello-form input:focus { outline: 2px solid var(--brand-deep); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--ink);
+  color: #F3E9DD;
+  padding: 3rem 0 2rem;
+  margin-top: 2rem;
+}
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer a { color: var(--brand); }
+.footer-social { display: flex; gap: .7rem; }
+.site-footer .icon-link { background: rgba(255,255,255,.1); color: var(--brand); }
+.site-footer .icon-link:hover { background: var(--brand); color: var(--ink); }
+.footer-note { font-size: .85rem; color: #C9BCAE; margin-top: 1.5rem; text-align: center; }
+
+/* ============================================================
+   Simple page header (stub pages)
+   ============================================================ */
+.page-hero {
+  text-align: center;
+  padding: 3.5rem 0 1rem;
+}
+.page-hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.page-hero p { color: var(--ink-soft); max-width: 50ch; margin: 0 auto; }
+
+.prose { max-width: 62ch; margin: 0 auto; }
+.prose p { font-size: 1.05rem; }
+
+/* logo flourish where the contact form used to be */
+.contact-logo { text-align: center; margin-top: 2.5rem; }
+.contact-logo img { width: clamp(180px, 40vw, 260px); height: auto; display: inline-block; }
+
+/* contact rows */
+.contact-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+.contact-list li {
+  display: flex; align-items: center; gap: .8rem;
+  background: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: .8rem;
+}
+.contact-list .icon-link { flex: none; }
+
+/* ---------- Scroll reveal ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .video-card { transform: rotate(-1deg); max-width: 520px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .portrait-placeholder { max-width: 260px; margin: 0 auto; }
+
+  .nav-toggle { display: grid; place-items: center; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    gap: .4rem;
+    background: var(--cream);
+    padding: 1rem 1.25rem 1.4rem;
+    box-shadow: var(--shadow);
+    border-bottom: 1px solid rgba(166,208,253,.4);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-social { display: none; }
+  .nav { position: relative; }
+}
