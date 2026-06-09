@@ -299,7 +299,7 @@ img { max-width: 100%; display: block; }
 
 /* the image placeholder (swap the inner div for an <img>) */
 .img-placeholder {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   background:
     radial-gradient(circle at 30% 30%, rgba(255,255,255,.6), transparent 60%),
     linear-gradient(135deg, var(--brand-soft), var(--peach));
