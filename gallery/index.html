@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery — danielaximenes.arte</title>
+  <title data-pt="Galeria — danielaximenes.arte">Gallery — danielaximenes.arte</title>
   <meta name="description" content="The full collection of original artwork by danielaximenes.arte." />
-  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/logo-dx.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -15,16 +15,19 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand-mark" href="/"><img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
+      <a class="brand-mark" href="/"><img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/gallery/">Gallery</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/" data-pt="Início">Home</a></li>
+        <li><a href="/gallery/" data-pt="Galeria">Gallery</a></li>
+        <li><a href="/about/" data-pt="Sobre">About</a></li>
+        <li><a href="/contact/" data-pt="Contato">Contact</a></li>
       </ul>
       <div class="nav-social">
         <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
       </div>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Mudar idioma / Switch language">
+        <span data-lang-opt="pt">PT</span><span data-lang-opt="en">EN</span>
+      </button>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -33,9 +36,9 @@
 
   <section class="page-hero">
     <div class="container reveal">
-      <span class="eyebrow">the whole collection</span>
-      <h1>Have a wander</h1>
-      <p>Every frame here is a placeholder. Copy a card, swap in your image, and write its little story.</p>
+      <span class="eyebrow" data-pt="a coleção completa">the whole collection</span>
+      <h1 data-pt="Dê uma passeada">Have a wander</h1>
+      <p data-pt="Cada moldura aqui é um espaço reservado. Copie um cartão, coloque a sua imagem e escreva a sua pequena história.">Every frame here is a placeholder. Copy a card, swap in your image, and write its little story.</p>
     </div>
   </section>
 
@@ -44,36 +47,36 @@
       <div class="gallery-grid">
         <!-- Copy one of these <article> blocks for each new piece -->
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece One</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Um">Piece One</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Two</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Dois">Piece Two</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Three</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Três">Piece Three</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Four</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Quatro">Piece Four</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Five</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Cinco">Piece Five</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Six</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Seis">Piece Six</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Seven</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Sete">Piece Seven</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
         <article class="art-card reveal">
-          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span>Add your artwork</span></div></div>
-          <div class="art-body"><h3>Piece Eight</h3><p class="art-meta">Medium · size</p><p class="art-desc">Description of this piece goes here.</p></div>
+          <div class="img-placeholder"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg><span data-pt="Adicione sua obra">Add your artwork</span></div></div>
+          <div class="art-body"><h3 data-pt="Peça Oito">Piece Eight</h3><p class="art-meta" data-pt="Técnica · tamanho">Medium · size</p><p class="art-desc" data-pt="A descrição desta peça vai aqui.">Description of this piece goes here.</p></div>
         </article>
       </div>
     </div>
@@ -82,12 +85,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <a class="brand-mark" href="/" style="color:#F3E9DD;"><img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
+        <a class="brand-mark" href="/" style="color:#F3E9DD;"><img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
         <div class="footer-social">
           <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
-      <p class="footer-note">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
+      <p class="footer-note" data-pt="© <span id='year'></span> danielaximenes.arte · Todas as obras são feitas à mão com carinho &amp; protegidas por direitos autorais.">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
     </div>
   </footer>
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>danielaximenes.arte — original art, made with warmth</title>
+  <title data-pt="danielaximenes.arte — arte original, feita com carinho">danielaximenes.arte — original art, made with warmth</title>
   <meta name="description" content="A cozy little corner of the internet for the original artwork of danielaximenes.arte." />
-  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/logo-dx.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,14 +18,14 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand-mark" href="/">
-        <img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte
+        <img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/gallery/">Gallery</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/" data-pt="Início">Home</a></li>
+        <li><a href="/gallery/" data-pt="Galeria">Gallery</a></li>
+        <li><a href="/about/" data-pt="Sobre">About</a></li>
+        <li><a href="/contact/" data-pt="Contato">Contact</a></li>
       </ul>
 
       <div class="nav-social">
@@ -33,6 +33,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
       </div>
+
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Mudar idioma / Switch language">
+        <span data-lang-opt="pt">PT</span><span data-lang-opt="en">EN</span>
+      </button>
 
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
@@ -44,15 +48,15 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="reveal">
-        <span class="eyebrow">handmade · original · one of a kind</span>
-        <h1>Come on in &amp; make yourself at <span class="squiggle">home</span></h1>
-        <p class="hero-lead">
+        <span class="eyebrow" data-pt="feito à mão · original · único">handmade · original · one of a kind</span>
+        <h1 data-pt="Entre e sinta-se em <span class='squiggle'>casa</span>">Come on in &amp; make yourself at <span class="squiggle">home</span></h1>
+        <p class="hero-lead" data-pt="Uma galeria aconchegante para as pinturas de <strong>danielaximenes.arte</strong> — cor, textura e as pequenas maravilhas do dia a dia, emolduradas com amor.">
           A snug little gallery for the paintings of <strong>danielaximenes.arte</strong> —
           colour, texture and small everyday wonders, framed with love.
         </p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#gallery">See the gallery</a>
-          <a class="btn btn-ghost" href="/about/">Meet the artist</a>
+          <a class="btn btn-primary" href="#gallery" data-pt="Ver a galeria">See the gallery</a>
+          <a class="btn btn-ghost" href="/about/" data-pt="Conheça a artista">Meet the artist</a>
         </div>
       </div>
 
@@ -71,9 +75,9 @@
   <section class="section section--warm" id="gallery">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow">fresh from the studio</span>
-        <h2>A few favourites</h2>
-        <p>Each piece below is a placeholder — swap in your own image and tell its little story.</p>
+        <span class="eyebrow" data-pt="direto do ateliê">fresh from the studio</span>
+        <h2 data-pt="Algumas favoritas">A few favourites</h2>
+        <p data-pt="Cada peça abaixo é um espaço reservado — coloque a sua imagem e conte a sua pequena história.">Each piece below is a placeholder — swap in your own image and tell its little story.</p>
       </div>
 
       <div class="gallery-grid">
@@ -83,13 +87,13 @@
             <!-- TO ADD IMAGE: replace the two lines below with <img src="/assets/piece-1.jpg" alt="..."> -->
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add your artwork</span>
+              <span data-pt="Adicione sua obra">Add your artwork</span>
             </div>
           </div>
           <div class="art-body">
-            <h3>Sunday Morning Light</h3>
-            <p class="art-meta">Acrylic on canvas · 40×50 cm</p>
-            <p class="art-desc">Write a cozy little description here — what inspired it, the colours you reached for, the feeling you hope it brings.</p>
+            <h3 data-pt="Luz de Domingo de Manhã">Sunday Morning Light</h3>
+            <p class="art-meta" data-pt="Acrílica sobre tela · 40×50 cm">Acrylic on canvas · 40×50 cm</p>
+            <p class="art-desc" data-pt="Escreva aqui uma descrição aconchegante — o que a inspirou, as cores que você escolheu, o sentimento que espera transmitir.">Write a cozy little description here — what inspired it, the colours you reached for, the feeling you hope it brings.</p>
           </div>
         </article>
 
@@ -97,13 +101,13 @@
           <div class="img-placeholder">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add your artwork</span>
+              <span data-pt="Adicione sua obra">Add your artwork</span>
             </div>
           </div>
           <div class="art-body">
-            <h3>Little Blue Hour</h3>
-            <p class="art-meta">Watercolour · 30×30 cm</p>
-            <p class="art-desc">A short note about this piece. Tell people the story behind it — they love that part.</p>
+            <h3 data-pt="Pequena Hora Azul">Little Blue Hour</h3>
+            <p class="art-meta" data-pt="Aquarela · 30×30 cm">Watercolour · 30×30 cm</p>
+            <p class="art-desc" data-pt="Uma breve nota sobre esta peça. Conte a história por trás dela — as pessoas adoram essa parte.">A short note about this piece. Tell people the story behind it — they love that part.</p>
           </div>
         </article>
 
@@ -111,13 +115,13 @@
           <div class="img-placeholder">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add your artwork</span>
+              <span data-pt="Adicione sua obra">Add your artwork</span>
             </div>
           </div>
           <div class="art-body">
-            <h3>Garden of Small Things</h3>
-            <p class="art-meta">Mixed media · 50×70 cm</p>
-            <p class="art-desc">Describe the textures, the mood, the moment you were trying to hold onto.</p>
+            <h3 data-pt="Jardim das Pequenas Coisas">Garden of Small Things</h3>
+            <p class="art-meta" data-pt="Técnica mista · 50×70 cm">Mixed media · 50×70 cm</p>
+            <p class="art-desc" data-pt="Descreva as texturas, o clima, o momento que você quis eternizar.">Describe the textures, the mood, the moment you were trying to hold onto.</p>
           </div>
         </article>
 
@@ -125,13 +129,13 @@
           <div class="img-placeholder">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add your artwork</span>
+              <span data-pt="Adicione sua obra">Add your artwork</span>
             </div>
           </div>
           <div class="art-body">
-            <h3>Warm Tea, Cold Day</h3>
-            <p class="art-meta">Oil on board · 25×25 cm</p>
-            <p class="art-desc">A line or two about this one. Keep it warm and personal — like a note to a friend.</p>
+            <h3 data-pt="Chá Quente, Dia Frio">Warm Tea, Cold Day</h3>
+            <p class="art-meta" data-pt="Óleo sobre madeira · 25×25 cm">Oil on board · 25×25 cm</p>
+            <p class="art-desc" data-pt="Uma ou duas linhas sobre esta. Mantenha o tom caloroso e pessoal — como um bilhete para um amigo.">A line or two about this one. Keep it warm and personal — like a note to a friend.</p>
           </div>
         </article>
 
@@ -139,13 +143,13 @@
           <div class="img-placeholder">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add your artwork</span>
+              <span data-pt="Adicione sua obra">Add your artwork</span>
             </div>
           </div>
           <div class="art-body">
-            <h3>Soft Afternoon</h3>
-            <p class="art-meta">Gouache · 35×50 cm</p>
-            <p class="art-desc">Share the story. What was the light doing? What were you feeling?</p>
+            <h3 data-pt="Tarde Suave">Soft Afternoon</h3>
+            <p class="art-meta" data-pt="Guache · 35×50 cm">Gouache · 35×50 cm</p>
+            <p class="art-desc" data-pt="Compartilhe a história. Como estava a luz? O que você sentia?">Share the story. What was the light doing? What were you feeling?</p>
           </div>
         </article>
 
@@ -153,19 +157,19 @@
           <div class="img-placeholder">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add your artwork</span>
+              <span data-pt="Adicione sua obra">Add your artwork</span>
             </div>
           </div>
           <div class="art-body">
-            <h3>Quiet Window</h3>
-            <p class="art-meta">Acrylic · 60×80 cm</p>
-            <p class="art-desc">Your description goes here. Tell its little story.</p>
+            <h3 data-pt="Janela Silenciosa">Quiet Window</h3>
+            <p class="art-meta" data-pt="Acrílica · 60×80 cm">Acrylic · 60×80 cm</p>
+            <p class="art-desc" data-pt="Sua descrição vai aqui. Conte a sua pequena história.">Your description goes here. Tell its little story.</p>
           </div>
         </article>
       </div>
 
       <div style="text-align:center; margin-top:2.5rem;">
-        <a class="btn btn-primary" href="/gallery/">See the whole collection →</a>
+        <a class="btn btn-primary" href="/gallery/" data-pt="Ver a coleção completa →">See the whole collection →</a>
       </div>
     </div>
   </section>
@@ -178,14 +182,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
       </div>
       <div class="reveal">
-        <span class="eyebrow">hello, nice to meet you</span>
-        <h2>The hands behind the art</h2>
-        <p>
+        <span class="eyebrow" data-pt="olá, prazer em conhecer você">hello, nice to meet you</span>
+        <h2 data-pt="As mãos por trás da arte">The hands behind the art</h2>
+        <p data-pt="Aqui vai uma introdução curta e calorosa. Conte aos visitantes quem você é, onde pinta e o que faz você pegar o pincel todos os dias. Duas ou três frases gentis bastam — daquelas que você diria tomando um chá.">
           A warm, short introduction lives here. Tell visitors who you are, where you
           paint, and what keeps you reaching for the brush. Two or three friendly
           sentences are plenty — the kind you'd say over a cup of tea.
         </p>
-        <a class="btn btn-ghost" href="/about/">Read my story</a>
+        <a class="btn btn-ghost" href="/about/" data-pt="Leia minha história">Read my story</a>
       </div>
     </div>
   </section>
@@ -194,11 +198,11 @@
   <section class="section">
     <div class="container">
       <div class="hello reveal">
-        <span class="eyebrow">follow along</span>
-        <h2>Come follow my journey</h2>
-        <p>If you'd like to follow along with new work, little studio moments and everything in between, you'll find me over on Instagram.</p>
+        <span class="eyebrow" data-pt="acompanhe">follow along</span>
+        <h2 data-pt="Venha acompanhar minha jornada">Come follow my journey</h2>
+        <p data-pt="Se quiser acompanhar os novos trabalhos, os pequenos momentos do ateliê e tudo o que vem no meio, você me encontra no Instagram.">If you'd like to follow along with new work, little studio moments and everything in between, you'll find me over on Instagram.</p>
         <div style="margin-top:1.4rem;">
-          <a class="btn btn-primary" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener">Find me on Instagram</a>
+          <a class="btn btn-primary" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" data-pt="Me encontre no Instagram">Find me on Instagram</a>
         </div>
       </div>
     </div>
@@ -209,13 +213,13 @@
     <div class="container">
       <div class="footer-grid">
         <a class="brand-mark" href="/" style="color:#F3E9DD;">
-          <img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte
+          <img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte
         </a>
         <div class="footer-social">
           <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
-      <p class="footer-note">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
+      <p class="footer-note" data-pt="© <span id='year'></span> danielaximenes.arte · Todas as obras são feitas à mão com carinho &amp; protegidas por direitos autorais.">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
     </div>
   </footer>
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — danielaximenes.arte</title>
+  <title data-pt="Sobre — danielaximenes.arte">About — danielaximenes.arte</title>
   <meta name="description" content="The story behind the art of danielaximenes.arte." />
-  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/logo-dx.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -15,16 +15,19 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand-mark" href="/"><img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
+      <a class="brand-mark" href="/"><img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/gallery/">Gallery</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/" data-pt="Início">Home</a></li>
+        <li><a href="/gallery/" data-pt="Galeria">Gallery</a></li>
+        <li><a href="/about/" data-pt="Sobre">About</a></li>
+        <li><a href="/contact/" data-pt="Contato">Contact</a></li>
       </ul>
       <div class="nav-social">
         <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
       </div>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Mudar idioma / Switch language">
+        <span data-lang-opt="pt">PT</span><span data-lang-opt="en">EN</span>
+      </button>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -33,8 +36,8 @@
 
   <section class="page-hero">
     <div class="container reveal">
-      <span class="eyebrow">hello, nice to meet you</span>
-      <h1>My little story</h1>
+      <span class="eyebrow" data-pt="olá, prazer em conhecer você">hello, nice to meet you</span>
+      <h1 data-pt="Minha pequena história">My little story</h1>
     </div>
   </section>
 
@@ -46,34 +49,34 @@
           <img src="/assets/artist-pic.JPG" alt="Daniela, the artist" />
         </div>
         <div class="story-text">
-          <h2>Hi, I'm Daniela</h2>
-          <p>
+          <h2 data-pt="Oi, eu sou a Daniela">Hi, I'm Daniela</h2>
+          <p data-pt="Oi, eu sou a Daniela — e fico muito feliz que você tenha chegado até aqui. Por muito tempo, meus dias não se pareciam nada com isto. Eu tinha um emprego estável, um plano bem arrumado e uma vozinha quieta dizendo que algo estava faltando. Talvez você conheça esse sentimento: aquele que toca de leve no seu ombro quando você menos espera.">
             Hi, I'm Daniela — and I'm so glad you wandered in. For a long time my
             days looked nothing like this. I had a steady job, a tidy plan, and a
             quiet little feeling that something was missing. You might know that
             feeling too: the one that gently taps you on the shoulder when you least
             expect it.
           </p>
-          <p>
+          <p data-pt="Eu não cresci me chamando de artista. Eu era apenas alguém com uma carreira perfeitamente sensata, que vivia roubando momentos para pintar — na hora do almoço, de madrugada, sempre que a cor chamava. Levei um tempo para admitir que esses momentos roubados eram a parte do dia que eu mais amava.">
             I didn't grow up calling myself an artist. I was simply someone with a
             perfectly sensible career, who kept stealing moments to paint — on lunch
             breaks, late at night, whenever colour came calling. It took me a while
             to admit that those stolen moments were the part of the day I loved most.
           </p>
-          <a class="btn btn-primary" href="/contact/">Get in touch</a>
+          <a class="btn btn-primary" href="/contact/" data-pt="Entre em contato">Get in touch</a>
         </div>
       </div>
 
       <!-- Row 2: text | photo (placeholder, tilted) -->
       <div class="story reveal">
         <div class="story-text">
-          <h2>Taking the leap</h2>
-          <p>
+          <h2 data-pt="Dando o salto">Taking the leap</h2>
+          <p data-pt="Então, um dia, com o coração na mão, eu dei o salto. Decidi correr atrás daquilo que me fazia sentir mais viva — mesmo sem enxergar a escada inteira, só o primeiro degrau.">
             So one day, with my heart in my throat, I took the leap. I decided to
             chase the thing that made me feel most alive — even though I couldn't
             see the whole staircase, only the very first step.
           </p>
-          <p>
+          <p data-pt="Foi assustador e maravilhoso na mesma medida. Sem garantias, sem mapa. Só um pincel, uma tela em branco e uma esperança teimosa de que seguir o que se ama nunca é, de verdade, um caminho errado.">
             It was terrifying and wonderful in equal measure. No guarantees, no map.
             Just a brush, a blank canvas, and a stubborn little hope that following
             what you love is never really a wrong turn.
@@ -83,7 +86,7 @@
           <div class="img-placeholder" style="border-radius: calc(var(--radius-lg) - 10px);">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add a photo</span>
+              <span data-pt="Adicione uma foto">Add a photo</span>
             </div>
           </div>
         </div>
@@ -95,14 +98,14 @@
           <img src="/assets/behindthescenes.jpeg" alt="Daniela's sketchbook with a work in progress and pastels" />
         </div>
         <div class="story-text">
-          <h2>Where the magic happens</h2>
-          <p>
+          <h2 data-pt="Onde a mágica acontece">Where the magic happens</h2>
+          <p data-pt="Hoje em dia, a maioria das peças começa num caderno de desenho bem usado, cercada por uma bagunça feliz de pastéis e uma xícara de chá pela metade. É aqui que as cores são testadas, os erros acontecem e as ideias, aos poucos, encontram seu rumo.">
             These days, most pieces begin in a well-loved sketchbook, surrounded by
             a happy little mess of pastels and a half-finished cup of tea. This is
             where colours get tested, mistakes get made, and ideas slowly find their
             feet.
           </p>
-          <p>
+          <p data-pt="Eu pinto do jeito que estou aprendendo a viver — um pouco bagunçada, muito esperançosa, sempre deixando espaço para um acaso feliz. Cada pintura carrega um pouco disso: um pequeno lembrete para continuar, para manter a leveza e para reparar nas pequenas coisas boas.">
             I paint the way I'm learning to live — a little messy, a lot hopeful,
             always leaving room for a happy accident. Every painting carries a hint
             of that: a small reminder to keep going, to stay soft, and to notice the
@@ -114,14 +117,14 @@
       <!-- Row 4: text | photo (placeholder, tilted) -->
       <div class="story reveal">
         <div class="story-text">
-          <h2>The highs, the lows &amp; everything between</h2>
-          <p>
+          <h2 data-pt="Os altos, os baixos &amp; tudo no meio">The highs, the lows &amp; everything between</h2>
+          <p data-pt="Não vou fingir que foi tudo um mar de rosas. Em alguns dias as cores fluem e tudo canta; em outros, nada dá certo e eu me pergunto o que diabos estava pensando. A vida, eu descobri, é exatamente assim — um ritmo suave de altos e baixos, e ambos têm algo gentil a nos ensinar.">
             I won't pretend it's all been sunshine. Some days the colours flow and
             everything sings; on others, nothing works and I wonder what on earth I
             was thinking. Life, I've found, is exactly like that — a gentle rhythm of
             highs and lows, and both have something kind to teach us.
           </p>
-          <p>
+          <p data-pt="Mas os dias difíceis nunca me fizeram desejar ter ficado onde eu estava. Pelo contrário, eles deixaram os dias bons ainda mais brilhantes e fizeram a aventura inteira parecer mais verdadeiramente minha.">
             But the low days have never once made me wish I'd stayed where I was. If
             anything, they've made the bright ones brighter, and the whole adventure
             feel more truly mine.
@@ -131,7 +134,7 @@
           <div class="img-placeholder" style="border-radius: calc(var(--radius-lg) - 10px);">
             <div>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
-              <span>Add a photo</span>
+              <span data-pt="Adicione uma foto">Add a photo</span>
             </div>
           </div>
         </div>
@@ -141,20 +144,20 @@
 
   <section class="section section--warm">
     <div class="container prose reveal" style="text-align:center;">
-      <span class="eyebrow">an open little invitation</span>
-      <h2>Whatever your leap is — take it.</h2>
-      <p>
+      <span class="eyebrow" data-pt="um convite de coração aberto">an open little invitation</span>
+      <h2 data-pt="Seja qual for o seu salto — dê ele.">Whatever your leap is — take it.</h2>
+      <p data-pt="Então aqui vai o meu bilhete para você, amigo(a): você não precisa ter tudo resolvido. Você só precisa começar. Tente. Pinte a pintura. Mande a mensagem. Dê o pequeno passo corajoso em direção àquilo que faz o seu coração se sentir um pouco mais vivo.">
         So here's my note to you, friend: you don't have to have it all figured out.
         You just have to begin. Try the thing. Paint the painting. Send the message.
         Take the small, brave step toward whatever makes your heart feel a little
         more alive.
       </p>
-      <p>
+      <p data-pt="A vida é curta demais — e bonita demais — para passá-la imaginando “e se”. Não importa se o seu salto é grande ou pequeno, eu estou torcendo por você, a cada passo do caminho.">
         Life is too short — and far too lovely — to spend it wondering “what if.”
         However big or small your leap, I'm cheering you on, every single step of
         the way.
       </p>
-      <p style="margin-top:1.6rem; font-family: var(--font-display);">
+      <p style="margin-top:1.6rem; font-family: var(--font-display);" data-pt="Com carinho e uma mão manchada de tinta,<br>Daniela ✿">
         With warmth and a paint-stained hand,<br>Daniela ✿
       </p>
     </div>
@@ -163,12 +166,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <a class="brand-mark" href="/" style="color:#F3E9DD;"><img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
+        <a class="brand-mark" href="/" style="color:#F3E9DD;"><img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
         <div class="footer-social">
           <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
-      <p class="footer-note">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
+      <p class="footer-note" data-pt="© <span id='year'></span> danielaximenes.arte · Todas as obras são feitas à mão com carinho &amp; protegidas por direitos autorais.">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
     </div>
   </footer>
 

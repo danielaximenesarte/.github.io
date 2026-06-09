@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — danielaximenes.arte</title>
+  <title data-pt="Contato — danielaximenes.arte">Contact — danielaximenes.arte</title>
   <meta name="description" content="Say hello to danielaximenes.arte." />
-  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <link rel="icon" type="image/png" href="/assets/logo-dx.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -15,16 +15,19 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand-mark" href="/"><img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
+      <a class="brand-mark" href="/"><img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="/gallery/">Gallery</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/" data-pt="Início">Home</a></li>
+        <li><a href="/gallery/" data-pt="Galeria">Gallery</a></li>
+        <li><a href="/about/" data-pt="Sobre">About</a></li>
+        <li><a href="/contact/" data-pt="Contato">Contact</a></li>
       </ul>
       <div class="nav-social">
         <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
       </div>
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Mudar idioma / Switch language">
+        <span data-lang-opt="pt">PT</span><span data-lang-opt="en">EN</span>
+      </button>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -33,9 +36,9 @@
 
   <section class="page-hero">
     <div class="container reveal">
-      <span class="eyebrow">don't be shy</span>
-      <h1>Let's chat</h1>
-      <p>Questions, commissions, or just to say hi — I'd love to hear from you.</p>
+      <span class="eyebrow" data-pt="não tenha vergonha">don't be shy</span>
+      <h1 data-pt="Vamos conversar">Let's chat</h1>
+      <p data-pt="Dúvidas, encomendas ou só para dar um oi — eu adoraria ouvir você.">Questions, commissions, or just to say hi — I'd love to hear from you.</p>
     </div>
   </section>
 
@@ -44,7 +47,7 @@
       <ul class="contact-list reveal">
         <li>
           <span class="icon-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-          <span><strong>Email</strong><br>danielaximenes.arte@gmail.com</span>
+          <span data-pt="<strong>E-mail</strong><br>danielaximenes.arte@gmail.com"><strong>Email</strong><br>danielaximenes.arte@gmail.com</span>
         </li>
         <li>
           <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
@@ -61,12 +64,12 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <a class="brand-mark" href="/" style="color:#F3E9DD;"><img class="brand-logo" src="/assets/logo.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
+        <a class="brand-mark" href="/" style="color:#F3E9DD;"><img class="brand-logo" src="/assets/logo-dx.png" alt="danielaximenes.arte" /> danielaximenes.arte</a>
         <div class="footer-social">
           <a class="icon-link" href="https://www.instagram.com/danielaximenes.arte/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
-      <p class="footer-note">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
+      <p class="footer-note" data-pt="© <span id='year'></span> danielaximenes.arte · Todas as obras são feitas à mão com carinho &amp; protegidas por direitos autorais.">© <span id="year"></span> danielaximenes.arte · All artwork is lovingly handmade &amp; copyright protected.</p>
     </div>
   </footer>
 

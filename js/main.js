@@ -38,7 +38,51 @@
 })();
 
 // --- Footer year ---
-(function () {
+function setFooterYear() {
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+}
+
+// --- Language toggle (PT / EN) ---
+// English text lives in the HTML; the Portuguese version is in a data-pt
+// attribute on the same element. We cache the English as data-en on load,
+// then swap innerHTML between the two. Choice is saved in localStorage.
+(function () {
+  var KEY = 'lang';
+  var SUPPORTED = ['pt', 'en'];
+  var nodes = document.querySelectorAll('[data-pt]');
+
+  // cache the English markup already in the page
+  nodes.forEach(function (el) {
+    el.setAttribute('data-en', el.innerHTML);
+  });
+
+  function apply(lang) {
+    nodes.forEach(function (el) {
+      var html = el.getAttribute('data-' + lang);
+      if (html != null) el.innerHTML = html;
+    });
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-lang-opt]').forEach(function (s) {
+      s.classList.toggle('is-active', s.getAttribute('data-lang-opt') === lang);
+    });
+    setFooterYear(); // year span gets recreated when innerHTML is swapped
+  }
+
+  function current() {
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    return SUPPORTED.indexOf(saved) > -1 ? saved : 'pt'; // default: Portuguese
+  }
+
+  apply(current());
+
+  var toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('lang') === 'pt' ? 'en' : 'pt';
+      try { localStorage.setItem(KEY, next); } catch (e) {}
+      apply(next);
+    });
+  }
 })();
